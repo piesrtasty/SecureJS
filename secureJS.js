@@ -1,4 +1,4 @@
-/* 
+/* \
 
 Suppose you wanted to extend the JavaScript Object such that getting and setting data in the object is only possible when providing a predetermined access key. 
 
