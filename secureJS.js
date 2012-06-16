@@ -2,6 +2,8 @@
 
 Suppose you wanted to extend the JavaScript Object such that getting and setting data in the object is only possible when providing a predetermined access key. 
 
+
+
 The key is first used to instantiate the SecureObject and subsequently used when storing and retrieving data from the SecureObject.
 
 Provide the implementation for a JavaScript function that satisfies the following ...
