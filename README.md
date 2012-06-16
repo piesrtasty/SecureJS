@@ -35,3 +35,6 @@ All the while the exact details surrounding your implementation of SecureJS and 
 remain hidden from the end user.
 
 ### Notes on Encapsulation and Information Hiding in JavaScript
+
+I have included the notes I took on the topic of encapsulation and information hiding in JavaScript that I took while
+writing SecureJS.js.
