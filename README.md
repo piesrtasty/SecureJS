@@ -33,3 +33,5 @@ objects other attributes.
 
 All the while the exact details surrounding your implementation of SecureJS and a given instance of the secure object class 
 remain hidden from the end user.
+
+### Notes on Encapsulation and Information Hiding in JavaScript
