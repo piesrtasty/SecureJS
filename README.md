@@ -1,8 +1,13 @@
-Suppose you wanted to extend the JavaScript Object such that getting and setting data in the object is only possible when providing a predetermined access key.
 
-The key is first used to instantiate the SecureObject and subsequently used when storing and retrieving data from the SecureObject.
+# SecureJS
 
-Provide the implementation for a JavaScript function that satisfies the following ...
+An extension of the JavaScript Object such that getting and setting data in the object is only possible when 
+providing a predetermined access key.
+
+This key is first used to instantiate the SecureObject and subsequently used when storing and retrieving data 
+from the SecureObject.
+
+### SecureJS attempts to satisfy the following requirements
 
 1. An object constructor with one parameter that defines the access key should be used to instantiate the SecureObject.
 
@@ -14,4 +19,4 @@ Provide the implementation for a JavaScript function that satisfies the followin
 
 5. We are not looking for functionality that encrypts/decrypts the stored data. -- We only want to store data in such a way that you can only gain read / write privileges by supplying the access key.
 
-Comment on the implementation and considerations that would make writing such a function possible.
+
