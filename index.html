@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Securejs by virtually-ghetto</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Securejs</h1>
+        <h2>An extension of the JavaScript Object such that getting and setting data in the object is only possible when providing a predetermined access key.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/virtually-ghetto/SecureJS/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/virtually-ghetto/SecureJS/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/virtually-ghetto/SecureJS" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>SecureJS</h1>
+
+<p>An extension of the JavaScript Object such that getting and setting data in the object is only possible when 
+providing a predetermined access key.</p>
+
+<p>This key is first used to instantiate the SecureObject and subsequently used when storing and retrieving data 
+from the SecureObject.</p>
+
+<h3>SecureJS satisfies the following requirements</h3>
+
+<ol>
+<li><p>An object constructor with one parameter that defines the access key should be used to instantiate the SecureObject.</p></li>
+<li><p>The object should allow storing and retrieving data only if the supplied access key matches the original access key used to instantiate the SecureObject, otherwise an exception should be thrown.</p></li>
+<li><p>It should <em>NOT</em> be possible to inspect the object and sniff out the contents, i.e. inspecting in Firebug or iterating over properties with a for/in loop would yield no valuable information whatsoever.</p></li>
+<li><p>It should <em>NOT</em> be possible to peel into the object to obtain the access key used to instantiate the SecureObject</p></li>
+<li><p>We are not looking for functionality that encrypts/decrypts the stored data. -- We only want to store data in such a way that you can only gain read / write privileges by supplying the access key.</p></li>
+</ol><h3>How does SecureJS work?</h3>
+
+<p>SecureJS creates private instance members of the class it defines by forming a closure when objects are instanitiated. 
+This is accomplished by wrapping the function in an anonymous self executing function that returns the constructor making 
+it possible to form a closure that includes both the class constructor and local variables. </p>
+
+<p>Thus you can encapsulate and hide 
+the attributes of the object and use a privileged method to interact with a private method that checks the validity of the 
+supplied access key, making it possible to avoid ever returning the actual access key. </p>
+
+<p>Additionally you can use the same set of functions to perform an access key check whenever you want to get or set any of the 
+objects other attributes.</p>
+
+<p>All the while the exact details surrounding your implementation of SecureJS and a given instance of the secure object class 
+remain hidden from the end user.</p>
+
+<h3>Notes on Encapsulation and Information Hiding in JavaScript</h3>
+
+<p>I have included the notes I took on the topic of encapsulation and information hiding in JavaScript that I took while
+writing SecureJS.js.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
